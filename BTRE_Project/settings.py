@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'realtors',
     'accounts',
     'contacts',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -160,3 +161,12 @@ EMAIL_USE_TLS = True
 
 
 django_heroku.settings(locals())
+
+
+
+AWS_ACCESS_KEY_ID = 'AKIAS6GEF3BZYUU6L7ET'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'django-btre'
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACT = None
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
